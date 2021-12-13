@@ -1,0 +1,229 @@
+@blue: #3caaff;
+// Color variables (appears count calculates by raw css)
+@color0: #ffffff; // Appears 5 times
+@color1: #f6f6f6; // Appears 4 times
+@color2: #cccccc; // Appears 2 times
+
+// Width variables (appears count calculates by raw css)
+@width1: 25px; // Appears 2 times
+@width2: 100%; // Appears 3 times
+@width4: 80%; // Appears 2 times
+
+// Height variables (appears count calculates by raw css)
+@height2: 13px; // Appears 3 times
+@height3: 25px; // Appears 2 times
+@height4: 100%; // Appears 2 times
+@height6: 75%; // Appears 2 times
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+body.dialog-open {
+  position: fixed;
+}
+.r-dialog-wrapper {
+  position: relative;
+  z-index: 9998;
+}
+.r-dialog-box {
+  align-items: center;
+  bottom: 0;
+  color: #848484;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+.r-dialog-mask {
+  background: rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+.r-dialog {
+  background: @color0;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  max-height: 70vh;
+  overflow: hidden;
+  position: relative;
+  width: 86%;
+}
+.r-dialog-title {
+  color: #2d2d2d;
+  display: block;
+  flex-shrink: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  overflow: hidden;
+  padding-bottom: 8px;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.r-dialog-close {
+  background-size: 13px 13px;
+  background: url("data:image/svg+xml, %3Csvg width='30' height='30' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='rgb(132,132,132)' fill-rule='evenodd'%3E%3Cpath d='M.44 2.56A1.5 1.5 0 1 1 2.56.44l27 27a1.5 1.5 0 1 1-2.12 2.12L15 17.123 2.56 29.56A1.5 1.5 0 1 1 .44 27.44L12.878 15 .44 2.56zM27.44.44a1.5 1.5 0 1 1 2.12 2.12l-9 9a1.5 1.5 0 1 1-2.12-2.12l9-9z'/%3E%3C/g%3E%3C/svg%3E")
+    no-repeat center;
+  font-size: 20px;
+  height: 30px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  text-decoration: none;
+  top: 0;
+  width: 30px;
+  img {
+    height: @height2;
+  }
+}
+.r-dialog-image-wrapper {
+  .r-dialog {
+    background: transparent;
+    border-radius: none;
+    display: inline-block;
+    max-height: @height6;
+    max-width: @width4;
+    overflow: visible;
+    width: auto;
+  }
+  .r-dialog-close {
+    background-size: 13px 13px;
+    background: url("data:image/svg+xml, %3Csvg width='30' height='30' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='rgb(255,255,255)' fill-rule='evenodd'%3E%3Cpath d='M.44 2.56A1.5 1.5 0 1 1 2.56.44l27 27a1.5 1.5 0 1 1-2.12 2.12L15 17.123 2.56 29.56A1.5 1.5 0 1 1 .44 27.44L12.878 15 .44 2.56zM27.44.44a1.5 1.5 0 1 1 2.12 2.12l-9 9a1.5 1.5 0 1 1-2.12-2.12l9-9z'/%3E%3C/g%3E%3C/svg%3E")
+      no-repeat center;
+    border-radius: 50%;
+    border: 2px solid @color0;
+    font-size: 20px;
+    height: @height3;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    text-decoration: none;
+    top: -40px;
+    width: @width1;
+    img {
+      height: @height2;
+    }
+  }
+  .r-dialog-image-wrapper {
+    .r-dialog {
+      background: transparent;
+      border-radius: none;
+      display: inline-block;
+      max-height: @height6;
+      max-width: @width4;
+      overflow: visible;
+      width: auto;
+    }
+    .r-dialog-close {
+      background-size: 13px 13px;
+      background: url("data:image/svg+xml, %3Csvg width='30' height='30' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='rgb(255,255,255)' fill-rule='evenodd'%3E%3Cpath d='M.44 2.56A1.5 1.5 0 1 1 2.56.44l27 27a1.5 1.5 0 1 1-2.12 2.12L15 17.123 2.56 29.56A1.5 1.5 0 1 1 .44 27.44L12.878 15 .44 2.56zM27.44.44a1.5 1.5 0 1 1 2.12 2.12l-9 9a1.5 1.5 0 1 1-2.12-2.12l9-9z'/%3E%3C/g%3E%3C/svg%3E")
+        no-repeat center;
+      border-radius: 50%;
+      border: 2px solid @color0;
+      font-size: 20px;
+      height: @height3;
+      position: absolute;
+      right: 0;
+      text-align: center;
+      text-decoration: none;
+      top: -40px;
+      width: @width1;
+      img {
+        height: @height2;
+      }
+    }
+  }
+}
+.r-dialog-link {
+  display: inline-block;
+}
+.r-dialog-image {
+  max-height: @height4;
+  max-width: @width2;
+  vertical-align: bottom;
+}
+.r-dialog-body {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 auto;
+  overflow: auto;
+  padding: 30px 20px 20px;
+}
+.r-dialog-content {
+  -webkit-overflow-scrolling: touch;
+  flex: 1;
+  font-size: 14px;
+  justify-content: center;
+  overflow: auto;
+  padding-bottom: 10px;
+  word-break: break-all;
+}
+.r-dialog-footer {
+  border-radius: 0 0 5px 5px;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+  height: 50px;
+  line-height: 50px;
+  overflow: hidden;
+  width: @width2;
+}
+.r-dialog-btn {
+  appearance: none;
+  background: transparent;
+  border: none;
+  display: block;
+  flex: 1;
+  font-size: 14px;
+  height: @height4;
+  outline: none;
+  position: relative;
+  user-select: none;
+  width: @width2;
+  &:only-child {
+    background: transparent;
+    border-radius: 0 0 5px 5px;
+    border-top: 1px solid @color1;
+    color: @blue;
+  }
+}
+.r-dialog-btn.disabled {
+  background-origin: border-box;
+  background: #dadada;
+  color: @color1;
+}
+.r-dialog-ok {
+  background-origin: border-box;
+  background: @blue;
+  // background: linear-gradient(315deg, #52b4ff 0%, #389cf8 100%);
+  border-radius: 0 0 5px 0;
+  border-top: 1px solid @color1;
+  color: @color0;
+  margin-right: -1px;
+  &:active {
+    background: @blue;
+    // background: linear-gradient(315deg, #35a1f3 0%, #2994f8 100%);
+  }
+}
+.r-dialog-cancel {
+  background-origin: border-box;
+  background: @color0;
+  border-radius: 0 0 0 5px;
+  border-top: 1px solid @color1;
+  &:active {
+    background: @color2;
+    border-top: 1px solid @color2;
+  }
+}

@@ -1,0 +1,33 @@
+.r-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+@keyframes r-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes r-fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.overlay-fade-enter-active {
+  animation: r-fade-in;
+}
+.overlay-fade-leave-active {
+  animation: r-fade-out;
+}

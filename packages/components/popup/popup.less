@@ -1,0 +1,137 @@
+.popup-fade-enter-active {
+  animation: r-fade-in;
+}
+.popup-fade-leave-active {
+  animation: r-fade-out;
+}
+.popup-slide {
+  &&-center-enter-active {
+    animation: r-fade-in;
+  }
+  &&-center-leave-active {
+    animation: r-fade-out;
+  }
+  &&-top-enter,
+  &&-top-leave-active {
+    transform: translate(0, -100%);
+  }
+  &&-right-enter,
+  &&-right-leave-active {
+    transform: translate(100%, 0);
+  }
+  &&-bottom-enter,
+  &&-bottom-leave-active {
+    transform: translate(0, 100%);
+  }
+  &&-left-enter,
+  &&-left-leave-active {
+    transform: translate(-100%, 0);
+  }
+}
+
+.popup-center {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.popup-bottom {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.popup-bottom.round {
+  border-radius: 8px 8px 0px 0px;
+}
+.popup-right {
+  right: 0;
+  top: 0;
+}
+.popup-right.round {
+  border-radius: 20px 0 0 20px;
+}
+.popup-left {
+  left: 0;
+  top: 0;
+}
+.popup-left.round {
+  border-radius: 0 20px 20px 0;
+}
+.popup-top {
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+.popup-top.round {
+  border-radius: 0 0 20px 20px;
+}
+.popup-box {
+  position: fixed;
+  max-height: 100%;
+  overflow-y: auto;
+  background-color: #ffffff;
+  -webkit-overflow-scrolling: touch;
+  // transition: transform 0.3s;
+  .r-ui-title {
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 1px solid #ededee;
+    border-radius: 8px 8px 0px 0px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #25324e;
+    line-height: 18px;
+  }
+}
+// @keyframes{
+// 	r-fade-in {
+// 		from { opacity: 0;
+// 		from { opacity: 0;
+// 	}
+// 	r-fade-out {
+// 		from { opacity: 1;
+// 		from { opacity: 1;
+// 	}
+// }
+// to {
+//   opacity: 0;
+//   opacity: 0;
+//   opacity: 1;
+//   opacity: 1;
+// }
+.r-overflow-hidden {
+  overflow: hidden !important;
+}
+.r-ui-popup__close-icon {
+  color: #969799;
+  cursor: pointer;
+  font-size: 18px;
+  position: absolute;
+  z-index: 1;
+  &:active {
+    opacity: 0.5;
+  }
+}
+.r-ui-popup__close-icon--top-left {
+  left: 19px;
+  top: 19px;
+}
+.r-ui-popup__close-icon--top-right {
+  right: 19px;
+  top: 19px;
+}
+.r-ui-popup__close-icon--bottom-left {
+  bottom: 19px;
+  left: 19px;
+}
+.r-ui-popup__close-icon--bottom-right {
+  bottom: 19px;
+  right: 19px;
+}
+.popup-bg {
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
