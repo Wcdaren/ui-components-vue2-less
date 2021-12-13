@@ -1,0 +1,249 @@
+// Color variables (appears count calculates by raw css)
+@color1: #eeeeee; // Appears 5 times
+@color2: #ededed; // Appears 4 times
+@color3: #999999; // Appears 2 times
+
+.r-tab {
+  background: @color1;
+  border: 1px solid @color1;
+  font-size: 12px;
+  padding: 10px;
+  position: relative;
+}
+.r-tab-horizontal {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  .close-btn {
+    background: @color3;
+    border-radius: 50%;
+    color: white;
+    font-size: 16px;
+    font-weight: normal;
+    height: 17px;
+    line-height: 14px;
+    position: absolute;
+    right: 0px;
+    text-align: center;
+    top: 0px;
+    width: 17px;
+  }
+}
+.close-btn {
+  background: @color3;
+  border-radius: 50%;
+  color: white;
+  font-size: 16px;
+  font-weight: normal;
+  height: 17px;
+  line-height: 14px;
+  position: absolute;
+  right: 0px;
+  text-align: center;
+  top: 0px;
+  width: 17px;
+}
+.r-tab-title {
+  border-bottom: 1px solid @color2;
+  box-sizing: border-box;
+  display: flex;
+  height: 50px;
+  line-height: 48px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: relative;
+  width: 100%;
+  // &: {
+  //   -webkit-scrollbar {
+  //     display: none;
+  //   }
+  // }
+}
+.r-tab-title-smooth {
+  scroll-behavior: smooth;
+}
+.nav-bar {
+  background: red;
+  bottom: 0px;
+  height: 2px;
+  left: 0px;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+  z-index: 2;
+}
+.r-tab-title-leftnav {
+  background: white;
+  border-right: 1px solid @color2;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+  scroll-behavior: smooth;
+  width: 100px;
+  // &: {
+  //   -webkit-scrollbar {
+  //     display: none;
+  //   }
+  // }
+  .nav-bar-left {
+    background: @color1;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    transition: all 0.3s ease-in-out;
+    width: 2px;
+    z-index: 2;
+  }
+  .r-title-nav {
+    border-left: 1px solid #f5f7fa;
+    border: 0;
+  }
+  .r-tab-active {
+    background: white;
+    a {
+      color: red;
+    }
+  }
+}
+.r-tab-title-rightnav {
+  background: white;
+  border-left: 1px solid @color2;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+  scroll-behavior: smooth;
+  width: 100px;
+  // &: {
+  //   -webkit-scrollbar {
+  //     display: none;
+  //   }
+  // }
+  .nav-bar-right {
+    background: @color1;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    transition: all 0.3s ease-in-out;
+    width: 2px;
+    z-index: 2;
+  }
+}
+.r-tab-link {
+  align-items: center;
+  color: #333333;
+  display: flex;
+  font-size: 12px;
+  height: 100%;
+  justify-content: center;
+  line-height: 1;
+  text-decoration: none;
+  width: 100%;
+}
+.r-tab-title-bottomnav {
+  border-top: 1px solid @color2;
+  border: 1px solid white;
+  box-sizing: border-box;
+  display: flex;
+  height: 50px;
+  line-height: 49px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: relative;
+  scroll-behavior: smooth;
+  width: 100%;
+  // &: {
+  //   -webkit-scrollbar {
+  //     display: none;
+  //   }
+  // }
+  .nav-bar-bottom {
+    background: @color1;
+    height: 2px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    transition: all 0.3s ease-in-out;
+    z-index: 2;
+  }
+}
+.r-title-nav-list {
+  align-items: center;
+  background: white;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: center;
+  position: relative;
+}
+.r-title-nav-leftnav {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  padding-left: 5px;
+  position: relative;
+}
+.r-title-nav-rightnav {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  padding-right: 5px;
+  position: relative;
+}
+.r-title-nav-scroll {
+  align-items: center;
+  background: white;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  min-width: 100px;
+  position: relative;
+}
+.r-title-vertical-scroll {
+  align-items: center;
+  background: white;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  min-height: 55px;
+  position: relative;
+}
+.r-tab-icon {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: inline-block;
+  height: 20px;
+  margin-right: 5px;
+  width: 20px;
+}
+.r-tab-active {
+  background: white;
+  border: 0;
+  a {
+    color: red;
+  }
+}
+.r-tab-item {
+  background: white;
+  border: 1px solid white;
+  box-sizing: border-box;
+  height: 200px;
+  padding: 10px;
+  width: 100%;
+  .hide {
+    display: none;
+  }
+}
+.r-tab-disable {
+  background: #e1e1e1 !important;
+}
+.tabbar-nav-word {
+  font-size: 12px;
+}
