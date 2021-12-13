@@ -1,0 +1,95 @@
+.r-progress {
+  display: flex;
+  position: relative;
+  .r-progress-outer {
+    background-color: #f3f3f3;
+    border-radius: 100px;
+    flex: 1;
+    height: 12px;
+    overflow: hidden;
+    .r-progress-inner {
+      // -webkit-transition: all 0.4s;
+      background-color: white;
+      height: 100%;
+      position: relative;
+      transition: all 0.4s;
+      width: 30%;
+      .r-progress-text {
+        color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+      }
+    }
+    .r-active {
+      &:before {
+        animation: progressActive 2s ease-in-out infinite;
+        border-radius: 10px;
+        bottom: 0;
+        content: '';
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
+  }
+  .r-progress-outer.r-progress-small {
+    height: 12px;
+    .r-progress-text {
+      font-size: 12px;
+      line-height: 12px;
+    }
+  }
+  .r-progress-outer.r-progress-base {
+    height: 16px;
+    .r-progress-text {
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+  .r-progress-outer.r-progress-large {
+    height: 20px;
+    .r-progress-text {
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+  .r-progress-outer-part {
+    width: 90%;
+  }
+  .r-progress-text {
+    font-size: 12px;
+    line-height: 1;
+    padding: 0 5px;
+  }
+  .r-icon-success {
+    background-size: cover;
+    // background: url('img/success.png') no-repeat;
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+  }
+  .r-icon-fail {
+    background-size: cover;
+    // background: url('img/wrong.png') no-repeat;
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+  }
+}
+// @keyframes {
+// 	progressActive {
+// 		0% { background: rgba(255, 255, 255, 0.1);
+// 		width: 0;
+// 	}
+// }
+20% {
+  background: rgba(255, 255, 255, 0.5);
+  width: 0;
+}
+to {
+  background: rgba(255, 255, 255, 0);
+  width: 10%;
+}
