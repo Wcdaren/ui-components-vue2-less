@@ -1,0 +1,3 @@
+*.stories.mdx
+*.stories.@(js|jsx|ts|tsx)
+**/demo/**

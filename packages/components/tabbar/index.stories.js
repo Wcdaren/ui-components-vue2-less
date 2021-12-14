@@ -1,11 +1,11 @@
-import RTab from './index'
-import DemoOne from './demo/tab1.vue'
-import Demo2 from './demo/tab2.vue'
-import './tab.less'
+import UI from './index'
+import DemoOne from './demo/1.vue'
+import DemoTwo from './demo/2.vue'
+import './index.less'
 
 export default {
-  title: 'common/Tab',
-  component: RTab,
+  title: 'common/Tabbar',
+  component: UI,
   argTypes: {
     position: {
       control: {
@@ -24,7 +24,7 @@ export default {
 
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
-  components: { RTab },
+  components: { UI },
   data() {
     return { isShowTab: false }
   },
@@ -52,7 +52,7 @@ export const One = () => ({
   components: { DemoOne },
   template: '<demo-one/>',
 })
-export const two = () => ({
-  components: { Demo2 },
-  template: '<Demo2/>',
+export const Two = () => ({
+  components: { DemoTwo },
+  template: '<demo-two/>',
 })
