@@ -1,5 +1,6 @@
 <template>
   <div class="r-progress">
+    <!-- 进度条外框 -->
     <div
       class="r-progress-outer"
       :class="[
@@ -8,6 +9,7 @@
       ]"
       :style="{ height: height }"
     >
+      <!-- 进度条实线 -->
       <div
         :class="['r-progress-inner', status == 'active' ? 'r-active' : '']"
         :style="bgStyle"
@@ -100,7 +102,8 @@ export default {
     bgStyle() {
       return {
         width: this.percentage + '%',
-        backgroundColor: this.strokeColor || '',
+        background:
+          'linear-gradient(360deg, #FFB21C 0%, #FFDF8F 100%, #FFDF8F 100%)',
       }
     },
     textStyle() {
