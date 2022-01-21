@@ -1,9 +1,7 @@
 {
   "version": "independent",
-  "workspaces": [
-    "packages/**/*"
-  ],
-  "npmClient": "yarn",
-  "useWorkspaces": true,
-  "command": {}
+  "private": true,
+  "name": "root",
+  "npmClient": "pnpm",
+  "useWorkspaces": true
 }

@@ -3,15 +3,17 @@
     <!-- <h4>图标文本标签栏</h4>
     <r-tabbar
       @tab-switch="tabSwitch1"
-      type="card"
       :tabbar-list="tabList1"
     ></r-tabbar> -->
     <h4>带有tips的文本标签栏</h4>
-    <r-tabbar
-      @tab-switch="tabSwitch2"
-      type="card"
-      :tabbar-list="tabList2"
-    ></r-tabbar>
+    <div class="test-ab">
+      <r-tabbar
+        @tab-switch="tabSwitch2"
+        :tabbar-list="tabList2"
+        type="line"
+      ></r-tabbar>
+    </div>
+
     <div
       :style="{
         height: '100px',
@@ -20,14 +22,13 @@
     >
       123
     </div>
-    <!-- <h4>固定底部，可跳转页面</h4>
+    <!-- <h4>固定底部，可跳转页面</h4> -->
     <r-tabbar
-      @tab-switch="tabSwitch3"
-      :tabbar-list="tabList3"
-      :bottom="true"
+      @tab-switch="tabSwitch1"
+      :tabbar-list="tabList4"
       class="my-tabbar"
     >
-    </r-tabbar> -->
+    </r-tabbar>
   </div>
 </template>
 
@@ -81,6 +82,18 @@ export default {
         {
           tabTitle: '我的',
           curr: false,
+          icon: '',
+        },
+      ],
+      tabList4: [
+        {
+          tabTitle: '赏金记录',
+          curr: false,
+          icon: '',
+        },
+        {
+          tabTitle: '提现记录',
+          curr: true,
           icon: '',
         },
       ],
@@ -145,5 +158,13 @@ export default {
 <style lang="less">
 .demo-one {
   background: #f2f2f5;
+
+  .my-tabbar {
+    outline: 1px solid red;
+  }
+  .test-ab {
+    // 溢出隐藏
+    overflow-x: hidden;
+  }
 }
 </style>

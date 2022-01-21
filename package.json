@@ -13,6 +13,9 @@
     "storybook-less-loader": "^0.1.0",
     "vue-loader": "^15.9.8"
   },
+  "workspaces": [
+    "./packages/components/*"
+  ],
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"

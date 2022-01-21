@@ -8,13 +8,15 @@
       v-on:click="switchTabs(value, index)"
     >
       <span class="icon-box">
+        <!-- 上标 -->
         <b class="tips num" v-if="value.num && value.num <= 99">{{
           value.num
         }}</b>
         <b class="tips" v-else-if="value.num && value.num >= 100">{{
           '...'
         }}</b>
-        <template v-if="value.icon">
+        <!-- 图标 -->
+        <!-- <template v-if="value.icon">
           <div
             class="icon"
             :style="{
@@ -23,10 +25,10 @@
               })`,
             }"
           ></div>
-        </template>
-        <span :class="['tabbar-nav-word', { 'big-word': !value.icon }]">{{
-          value.tabTitle
-        }}</span>
+        </template> -->
+        <span :class="['tabbar-nav-word', { 'big-word': !value.icon }]">
+          {{ value.tabTitle }}
+        </span>
       </span>
     </a>
   </div>
